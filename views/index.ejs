@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,13 @@
     <title>Domovská stránka</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
-
+        <h1>Filmová anketa</h1>
     </header>
     <main>
-        <h1>Filmová anketa</h1>
+
         <form action="/submit" method="post" class="form-container">
             <div>
                 <label>Máte rádi filmy?</label>
@@ -28,9 +30,10 @@
                     <option value="Ne">Ne</option>>
                 </select>
             </div>
+            <hr>
             <div>
                 <label>Jak často sledujete filmy/seriály?</label>
-                <br>
+
                 <input type="radio" id="denne" name="often" value="KAZDY">
                 <label for="denne">Každý den</label>
                 <br>
@@ -49,47 +52,50 @@
                 <input type="radio" id="videl" name="often" value="VIDEL">
                 <label for="videl">Nesleduju. Viděl jsem vše.</label>
             </div>
+            <hr>
             <div>
                 <label for="importance">Jak velká je vaše znalost filmů/seriálů? (0 = Nejmenší, 10 = Největší)</label>
                 <input type="range" id="importance" name="importance" min="0" max="10" step="1">
                 <span id="importanceValue"></span>
             </div>
+            <hr>
             <label>Co pohledáváte od filmu/seriálu?</label>
             <input type="text" id="roleModel" name="roleModel">
-            <br>
+            <hr>
             <label>Jaké jsou vaše oblíbené filmy/seriály (žánr)</label>
+            <input type="checkbox" id="Action" name="genre" value="Action" />
+            <label for="Action" class="">Akční</label>
             <br>
-            <input type="checkbox" id="Action" name="genre"/>
-            <label for="Action">Akční</label>
-            <br>
-            <input type="checkbox" id="Adventure" name="genre" value="Adventure"/>
+            <input type="checkbox" id="Adventure" name="genre" value="Adventure" />
             <label for="Adventure">Dobrodružné</label>
             <br>
-            <input type="checkbox" id="Crime" name="genre"/>
+            <input type="checkbox" id="Crime" name="genre" value="Crime" />
             <label for="Crime">Krimi</label>
             <br>
-            <input type="checkbox" id="Thriller" name="genre"/>
+            <input type="checkbox" id="Thriller" name="genre" value="Thriller" />
             <label for="Thriller">Thrillery</label>
             <br>
-            <input type="checkbox" id="Fantasy" name="genre"/>
+            <input type="checkbox" id="Fantasy" name="genre" value="Fantasy" />
             <label for="Fantasy">Fantasy</label>
             <br>
-            <input type="checkbox" id="Scifi" name="genre"/>
+            <input type="checkbox" id="Scifi" name="genre" value="Scifi" />
             <label for="Scifi">Sci-fi</label>
             <br>
-            <input type="checkbox" id="Historic" name="genre"/>
+            <input type="checkbox" id="Historic" name="genre" value="Historic" />
             <label for="Historic">Historické</label>
             <br>
-            <input type="checkbox" id="Horror" name="genre"/>
+            <input type="checkbox" id="Horror" name="genre" value="Horror" />
             <label for="Horror">Horrorové</label>
             <br>
-            <input type="checkbox" id="Romantic" name="genre"/>
+            <input type="checkbox" id="Romantic" name="genre" value="Romantic" />
             <label for="Romantic">Romantické</label>
             <br>
             <input type="checkbox" id="Jine">
-            <input type="text" name="genre" id="Genrejine" placeholder="Jiné">
-            </div>
+            <label for="Jine">Jiné</label>
             <br>
+            </div>
+            <hr>
+
             <label>Pokud by jste měli doporučit nějaký film jaký?</label>
             <input type="text" id="filmD" name="filmD">
             <br>
@@ -108,10 +114,11 @@
         const slider = document.getElementById('importance');
         const output = document.getElementById('importanceValue');
         output.innerHTML = slider.value; // Zobrazit výchozí hodnotu
-        
-        slider.oninput = function() {
+
+        slider.oninput = function () {
             output.innerHTML = this.value;
         }
-        </script>
+    </script>
 </body>
+
 </html>

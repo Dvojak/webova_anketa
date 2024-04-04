@@ -44,38 +44,17 @@ app.post("/submit", (req, res) => {
   });
 });
 
-/* Routa na stránku http://localhost:3000/messages/json */
-app.get('/messages/json', (req, res) => {
-  fs.readFile('data.json', (err, data) => {
-    if (err) throw err;
-    if (data) {
-      let messages = JSON.parse(data);
-      // res.render('messages', { messages: messages })
-      res.json(messages);
+/* Routa pro zobrazení výsledků ankety */
+app.get("/results", (req, res) => {
+  // Zde bude načtení dat ze souboru responses.json a jejich předání do šablony
+  fs.readFile('responses.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Nastala chyba při čtení dat.');
     }
-  })  
-})
-
-app.get('/messages', (req, res) => {
-  let autor = req.query.autor;
-  let datum = req.query.datum;
-  fs.readFile('data.json', (err, data) => {
-    if (err) throw err;
-    if (data) {
-      let messages = JSON.parse(data);
-      if (autor) {
-        messages = messages.filter(message => message.author.includes(autor));
-      }
-      if (datum) {
-        messages = messages.filter(message => {
-          const messageDate = new Date(message.timestamp).toISOString().split('T')[0];
-          return messageDate === datum;
-      });
-}
-      res.render('messages', { zpravy: messages, autor: 'Marek Lučný' })
-    }
-  })  
-}
-)
+    const responses = JSON.parse(data);
+    res.render('results', { responses }); // Předání dat-odpovědí šabloně results.ejs
+  });
+});
 
 app.listen(3000)

@@ -1,26 +1,102 @@
-h1 {
-    background-color: blue;
-    color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-form {
-    background-color: antiquewhite;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: #ddd;
+    padding: 20px;
 }
 
-form div { 
-  padding: 10px;  
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin: 0 auto; /* Add this line to center the header */
+    width: 50%;
 }
 
-label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-th, td, table {
-    border: 1px solid black;
-    border-collapse: collapse;
+header p {
+    font-size: 16px;
 }
 
-td, th {
-    padding: 10px;
+main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+}
+
+.form-container {
+    width: 50%; /* Adjust width as needed */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-container label {
+    
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.form-container input[type="text"],
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background-color: #444;
+    color: #ddd;
+}
+
+.form-container input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #444;
+    color: #ddd;
+}
+
+.form-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #777;
+    margin-bottom: 10px;
+}
+input{
+    margin: 1vh 0;
 }

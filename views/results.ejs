@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="css/result.css">
+
+
+<h1>Výsledky ankety</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Datum</th>
+        <th>Čas</th>
+        <th>Filmy</th>
+        <th>Seriály</th>
+        <th>Znalost</th>
+        <th>Co pohledávají od filmů</th>
+        <th>Genre</th>
+        <th>Doporučený film</th>
+        <th>Doporučený seriál</th>
+    </tr>
+    <% responses.forEach(function(response) { 
+        const date = new Date(response.timestamp);
+        const dateString = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
+        const timeString = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
+    %>
+        <tr>
+            <td><%= response.id %></td>
+            <td><%= dateString %></td>
+            <td><%= timeString %></td>
+            <td><%= response.answers.filmy %></td>
+            <td><%= response.answers.serial %></td>
+            <td><%= response.answers.importance %></td>
+            <td><%= response.answers.roleModel %></td>
+            <td><%= response.answers.genre %></td>
+            <td><%= response.answers.filmD %></td>
+            <td><%= response.answers.serialD %></td>
+        </tr>
+    <% }); %>
+</table>    
