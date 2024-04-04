@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výpis zpráv</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Výpis zpráv</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Autor</th>
+                <th>IP</th>
+                <th>Čas</th>
+                <th>Zpráva</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% zpravy.forEach(function(zprava) { %>
+            <tr>
+                <td><%= zprava.author %></td>
+                <td><%= zprava.ip %></td>
+                <td><%= zprava.timestamp %></td>
+                <td><%= zprava.message %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Počet zpráv: <%= zpravy.length %></td>
+            </tr>
+        </tfoot>
+    </table>    
+<footer>
+    <hr>
+    <p>Autor: <%= autor.toUpperCase() %></p>
+</footer>    
+</body>
+</html>

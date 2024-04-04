@@ -1,0 +1,26 @@
+h1 {
+    background-color: blue;
+    color: white;
+}
+
+form {
+    background-color: antiquewhite;
+}
+
+form div { 
+  padding: 10px;  
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+th, td, table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+}

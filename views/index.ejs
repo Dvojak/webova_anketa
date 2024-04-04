@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Filmová anketa</h1>
+        <form action="/submit" method="post" class="form-container">
+            <div>
+                <label>Máte rádi filmy?</label>
+                <select id="filmy" name="filmy">
+                    <option value="Ano">Ano</option>
+                    <option value="Ne">Ne</option>>
+                </select>
+            </div>
+            <div>
+                <label>Máte rádi seriály?</label>
+                <select id="serial" name="serial">
+                    <option value="Ano">Ano</option>
+                    <option value="Ne">Ne</option>>
+                </select>
+            </div>
+            <div>
+                <label>Jak často sledujete filmy/seriály?</label>
+                <br>
+                <input type="radio" id="denne" name="often" value="KAZDY">
+                <label for="denne">Každý den</label>
+                <br>
+                <input type="radio" id="dny" name="often" value="DNY">
+                <label for="dny">Co pár dnů</label>
+                <br>
+                <input type="radio" id="tyden" name="often" value="TYDEN">
+                <label for="tyden">Jednou za týden</label>
+                <br>
+                <input type="radio" id="mesic" name="often" value="MESIC">
+                <label for="mesic">Jednou za měsíc</label>
+                <br>
+                <input type="radio" id="nikdy" name="often" value="NIKDY">
+                <label for="nikdy">Nesleduju</label>
+                <br>
+                <input type="radio" id="videl" name="often" value="VIDEL">
+                <label for="videl">Nesleduju. Viděl jsem vše.</label>
+            </div>
+            <div>
+                <label for="importance">Jak velká je vaše znalost filmů/seriálů? (0 = Nejmenší, 10 = Největší)</label>
+                <input type="range" id="importance" name="importance" min="0" max="10" step="1">
+                <span id="importanceValue"></span>
+            </div>
+            <label>Co pohledáváte od filmu/seriálu?</label>
+            <input type="text" id="roleModel" name="roleModel">
+            <br>
+            <label>Jaké jsou vaše oblíbené filmy/seriály (žánr)</label>
+            <br>
+            <input type="checkbox" id="Action" name="genre"/>
+            <label for="Action">Akční</label>
+            <br>
+            <input type="checkbox" id="Adventure" name="genre" value="Adventure"/>
+            <label for="Adventure">Dobrodružné</label>
+            <br>
+            <input type="checkbox" id="Crime" name="genre"/>
+            <label for="Crime">Krimi</label>
+            <br>
+            <input type="checkbox" id="Thriller" name="genre"/>
+            <label for="Thriller">Thrillery</label>
+            <br>
+            <input type="checkbox" id="Fantasy" name="genre"/>
+            <label for="Fantasy">Fantasy</label>
+            <br>
+            <input type="checkbox" id="Scifi" name="genre"/>
+            <label for="Scifi">Sci-fi</label>
+            <br>
+            <input type="checkbox" id="Historic" name="genre"/>
+            <label for="Historic">Historické</label>
+            <br>
+            <input type="checkbox" id="Horror" name="genre"/>
+            <label for="Horror">Horrorové</label>
+            <br>
+            <input type="checkbox" id="Romantic" name="genre"/>
+            <label for="Romantic">Romantické</label>
+            <br>
+            <input type="checkbox" id="Jine">
+            <input type="text" name="genre" id="Genrejine" placeholder="Jiné">
+            </div>
+            <br>
+            <label>Pokud by jste měli doporučit nějaký film jaký?</label>
+            <input type="text" id="filmD" name="filmD">
+            <br>
+            <label>Pokud by jste měli doporučit nějaký serial jaký?</label>
+            <input type="text" id="serialD" name="serialD">
+            <br>
+            <button type="submit">Odeslat odpovědi</button>
+
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2024 - Dvojak</p>
+    </footer>
+    <script>
+        const slider = document.getElementById('importance');
+        const output = document.getElementById('importanceValue');
+        output.innerHTML = slider.value; // Zobrazit výchozí hodnotu
+        
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+        </script>
+</body>
+</html>

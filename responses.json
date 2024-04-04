@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1712215524161,
+    "timestamp": "2024-04-04T07:25:24.161Z",
+    "answers": {
+      "filmy": "Ano",
+      "serial": "Ano",
+      "importance": "10",
+      "roleModel": "Marián Kufa",
+      "genre": [
+        "on",
+        ""
+      ],
+      "filmD": "1",
+      "serialD": "2"
+    }
+  },
+  {
+    "id": 1712215554735,
+    "timestamp": "2024-04-04T07:25:54.735Z",
+    "answers": {
+      "filmy": "Ano",
+      "serial": "Ano",
+      "often": "MESIC",
+      "importance": "5",
+      "roleModel": "20",
+      "genre": [
+        "on",
+        ""
+      ],
+      "filmD": "1",
+      "serialD": "3"
+    }
+  },
+  {
+    "id": 1712215612340,
+    "timestamp": "2024-04-04T07:26:52.340Z",
+    "answers": {
+      "filmy": "Ano",
+      "serial": "Ano",
+      "importance": "5",
+      "roleModel": "",
+      "genre": [
+        "Adventure",
+        ""
+      ],
+      "filmD": "",
+      "serialD": ""
+    }
+  },
+  {
+    "id": 1712215621531,
+    "timestamp": "2024-04-04T07:27:01.531Z",
+    "answers": {
+      "filmy": "Ano",
+      "serial": "Ano",
+      "often": "KAZDY",
+      "importance": "5",
+      "roleModel": "20",
+      "genre": [
+        "Adventure",
+        ""
+      ],
+      "filmD": "4",
+      "serialD": "5"
+    }
+  }
+]
